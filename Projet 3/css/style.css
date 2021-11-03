@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'optiengeetienneregular';
+    src: url('optiengeetienne-webfont.woff2') format('woff2'),
+         url('optiengeetienne-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-image: url('../img/4240965.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    font-family:"optiengeetienneregular";
+}
+
+.vid {
+  max-width: 840;
+  max-height: 480;
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+ul {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.center {
+  text-align: center;
+}
