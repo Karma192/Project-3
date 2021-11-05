@@ -2,25 +2,34 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Final Fantasy by K.corp</title>
+    <title>Final Fantasy XV by K.corp</title>
     <link rel="icon" type="image/x-icon" href="img/iconff.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div> <!--Navigation Bar-->
+    <!--<a href="FF Wiki"><a href="FFXV Wiki"><a href="trailer"><a href="store"><a href="gallery">-->
+    <!--Navigation Bar-->
+    <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#Introduction">Introduction</a></li>
+        <li><a href="#News">News</a></li>
+        <li><a href="#Gallery">Gallery</a></li>
         <li style="float:right"><a href="#about">About</a></li>
       </ul>
-    </div>
+    </nav>
 
-    <div class="center"> <!--Logo FFXV-->
+    <div class="center" id="top"> <!--Logo FFXV-->
       <img src="img/logoff1.png" alt="logo ffxv">
     </div>
 
-    <div class="block"> <!--Block 1-->
+    <div class="BGButton">
+      <button class="button">test</button>
+    </div>
+
+    <div class="block" id="FF Wiki"> <!--Block 1-->
       <h1 class="center">Final Fantasy</h1>
       <h2 class="center">The Serie</h2>
       <hr>
@@ -35,11 +44,11 @@ It has had a significant influence on the usual game mechanics of role-playing v
       <hr>
     </div>
 
-    <div class="center"> <!--Pictures Sword-->
-      <img src="img/sword1.png" alt="Noctis's Sword" width = 33 height = 100>
+    <div class="center rotate"> <!--Pictures Sword-->
+      <img src="img/sword1.png" alt="Noctis's Sword" width = 50 height = 150>
     </div>
 
-    <div class="block"> <!--Block 2-->
+    <div class="block" id="FFXV Wiki"> <!--Block 2-->
       <hr>
       <h2 class="center">Final Fantasy <strong>XV</strong></h2>
       <hr>
@@ -50,79 +59,78 @@ It has had a significant influence on the usual game mechanics of role-playing v
       <hr>
     </div>
 
-    <div class="center"> <!--Pictures Sword but again-->
-      <img src="img/sword1.png" alt="Noctis's Sword" width = 33 height = 100>
+    <div class="center rotate"> <!--Pictures Sword but again-->
+      <img src="img/sword1.png" alt="Noctis's Sword" width = 50 height = 150>
     </div>
 
-    <div class="vid"> <!--Youtube Trailer-->
+    <div class="vid" id="trailer"> <!--Youtube Trailer-->
       <iframe width = 60% height = 650px src="https://www.youtube.com/embed/CNM6o9um1dc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
-    <div class="center"> <!--Pictures Sword but again again-->
-      <img src="img/sword1.png" alt="Noctis's Sword" width = 33 height = 100>
+    <div class="center rotate"> <!--Pictures Sword but again again-->
+      <img src="img/sword1.png" alt="Noctis's Sword" width = 50 height = 150>
     </div>
 
-<div class="center"> <!--Steam link-->
-  <iframe src="https://store.steampowered.com/widget/637650/" frameborder="0" width="646" height="190"></iframe>
-</div>
-
-<div class="center"> <!--Gallery-->
-  <div class="block">
-      <h1>Gallery</h1>
-      <hr>
-  </div>
-  <div class="container">
-
-    <div class="Slides">
-      <div class="numbertext">1 / 5</div>
-      <img src="img/Gallery01.jpg" style="width:55%">
+    <div class="center" id="store"> <!--Steam link-->
+      <iframe src="https://store.steampowered.com/widget/637650/" frameborder="0" width="646" height="190"></iframe>
     </div>
 
-    <div class="Slides">
-      <div class="numbertext">2 / 5</div>
-      <img src="img/Gallery02.png" style="width:55%">
+    <div class="center rotate"> <!--Pictures Sword but again again again-->
+      <img src="img/sword1.png" alt="Noctis's Sword" width = 50 height = 150>
     </div>
 
-    <div class="Slides">
-      <div class="numbertext">3 / 5</div>
-      <img src="img/Gallery03.jpg" style="width:55%">
-    </div>
-
-    <div class="Slides">
-      <div class="numbertext">4 / 5</div>
-      <img src="img/Gallery04.jpg" style="width:55%">
-    </div>
-
-    <div class="Slides">
-      <div class="numbertext">5 / 5</div>
-      <img src="img/Gallery05.jpg" style="width:55%">
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-    <div class="row">
-      <div class="column">
-        <img class="demo cursor" src="img/Gallery01.jpg" style="width:100%" onclick="currentSlide(1)" alt="Noctis x Ardyn">
+    <div class="center" id="gallery"> <!--Gallery-->
+      <div class="block">
+        <h1>Gallery</h1>
+        <hr>
       </div>
-      <div class="column">
-        <img class="demo cursor" src="img/Gallery02.png" style="width:100%" onclick="currentSlide(2)" alt="Lunafreya">
+      <div class="container">
+
+        <div class="Slides">
+          <img src="img/Gallery01.jpg" style="width:55%">
+        </div>
+
+      <div class="Slides">
+        <img src="img/Gallery02.png" style="width:55%">
       </div>
-      <div class="column">
-        <img class="demo cursor" src="img/Gallery03.jpg" style="width:100%" onclick="currentSlide(3)" alt="World">
+
+      <div class="Slides">
+        <img src="img/Gallery03.jpg" style="width:55%">
       </div>
-      <div class="column">
-        <img class="demo cursor" src="img/Gallery04.jpg" style="width:100%" onclick="currentSlide(4)" alt="Fight">
+
+      <div class="Slides">
+        <img src="img/Gallery04.jpg" style="width:55%">
       </div>
-      <div class="column">
-        <img class="demo cursor" src="img/Gallery05.jpg" style="width:100%" onclick="currentSlide(5)" alt="Meteor">
+
+      <div class="Slides">
+        <img src="img/Gallery05.jpg" style="width:55%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="img/Gallery01.jpg" style="width:100%" onclick="currentSlide(1)" alt="Noctis x Ardyn">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/Gallery02.png" style="width:100%" onclick="currentSlide(2)" alt="Lunafreya">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/Gallery03.jpg" style="width:100%" onclick="currentSlide(3)" alt="World">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/Gallery04.jpg" style="width:100%" onclick="currentSlide(4)" alt="Fight">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/Gallery05.jpg" style="width:100%" onclick="currentSlide(5)" alt="Meteor">
+        </div>
       </div>
     </div>
-  </div>
 
     <script> //Java for the Gallery
     var slideIndex = 1;
@@ -156,7 +164,7 @@ It has had a significant influence on the usual game mechanics of role-playing v
   </script>
   </div>
 
-  <div class="End">
+  <div class="End" id="bottom">
     <p>HTML Project realised by Kyosuuke and Karma, for the <strong>G.Tech 1</strong> of the year 2021-2022.</p>
     <hr>
     <p>Contact Us <br> Karma : agrandpaul@gaming.tech or PMA | Karma#6020 <br>Kyosuuke : cli@gaming.tech or Kyosuuke#8406 </p>

@@ -9,34 +9,78 @@
 
 /*Background and General Modifications*/
 body {
-    background-image: url('../img/Background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top inherit;
+    background-image: url('../img/BackgroundFF.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: top inherit, top inherit;
     font-family:"optiengeetienneregular";
-    letter-spacing: 2px;
-    word-spacing: 3.5px;
+    letter-spacing: 1px;
+    word-spacing: 2.5px;
 }
+
+.BGButton {
+  background: url('../img/Button.png');
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: whitesmoke;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: auto;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
 
 /*Modifications for Text*/
 p {
+  font-family: 'Kaisei Opti', serif;
   font-size: 20px;
   color: white;
 }
 h1 {
   font-size: 4vw;
   color: whitesmoke;
+  letter-spacing: 5px;
 }
 h2 {
   font-size: 3.25vw;
   color: lightgrey;
+  letter-spacing: 5px;
 }
 h3 {
   font-size: 3vw;
   color: lightgrey;
+  letter-spacing: 5px;
+}
+
+button {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+/*Object Centered*/
+.center {
+  text-align: center;
 }
 
 /*Naviguation Bar*/
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 0;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -64,10 +108,7 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
-.center {
-  text-align: center;
-}
-
+/*Parameters for blocks*/
 .block {
   border-radius: 15px;
   background-color: black;
@@ -75,7 +116,7 @@ li a:hover:not(.active) {
   padding-right: 30px;
   padding-bottom: 20px;
   padding-left: 30px;
-  max-width: 60%;
+  max-width: 50%;
   margin: auto;
   opacity: 0.85;
 }
@@ -148,14 +189,6 @@ div.gallery img {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
 .caption-container {
   text-align: center;
   background-color: #222;
@@ -182,7 +215,9 @@ div.gallery img {
 .demo:hover {
   opacity: 1;
 }
-.End { /*Bottom of the site*/
+
+/*Bottom of the site*/
+.End {
   border-radius: 15px;
   background-color: gray;
   padding-top: 10px;
