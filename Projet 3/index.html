@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!--Background Music-->
+    <audio id="BGM" loop hidden>
+      <source src="sound/FFXV Theme.mp3" type="audio/mp3">
+    </audio>
+
     <!--Navigation Bar-->
     <nav>
       <ul>
@@ -17,25 +22,18 @@
         <li><a href="#wikiFF">Final Fantasy</a></li>
         <li><a href="#wikiFFXV">Final Fantasy XV</a></li>
         <li><a href="#trailer">Trailer</a></li>
-        <li><a href="#steam">Steam</a></li>
-        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#metacritic">Metacritic</a></li>
         <li><a href="#news">News</a></li>
+        <li><a href="#steam">Steam</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li style="float:right"><a href="#about">About</a></li>
       </ul>
     </nav>
 
-    <div class="center">
-      <audio controls autoplay loop>
-        <source src="sound/FFXV Theme.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-
     <script type="text/javascript"> //JavaScript for Smooth Scrooling
       let anchorlinks = document.querySelectorAll('a[href^="#"]')
 
-      for (let item of anchorlinks) { // relitere
+      for (let item of anchorlinks) {
         item.addEventListener('click', (e)=> {
           let hashval = item.getAttribute('href')
           let target = document.querySelector(hashval)
@@ -49,15 +47,33 @@
       }
     </script>
 
+
+
     <div class="center" id="top"> <!--Logo FFXV-->
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
         <img src="img/logoff1.png" alt="logo ffxv">
       </a>
     </div>
 
-    <div class="BGButton">
-      <button class="button">test</button>
+    <div class="center">
+      <p><strong>Background Music</strong></p>
+      <button onclick="playAudio()" type="button" class="button"> <img src="img/Music1.png" alt="MusicOn" width=75px> </button>
+      <button onclick="pauseAudio()" type="button" class="button2"> <img src="img/Music2.png" alt="MusicOff" width=75px> </button>
     </div>
+
+    <hr>
+
+    <script type="text/javascript"> //JavaScript for play and pause Background music
+      var sound = document.getElementById("BGM");
+      sound.volume = 0.1;
+
+      function playAudio() {
+          sound.play()
+        }
+      function pauseAudio() {
+          sound.pause();
+        }
+    </script>
 
     <div class="block" id="wikiFF"> <!--Block 1-->
       <h1 class="center">Final Fantasy</h1>
@@ -80,7 +96,7 @@ It has had a significant influence on the usual game mechanics of role-playing v
       <hr>
     </div>
 
-    <div class="center"> <!--Pictures Sword-->
+    <div class="center effect"> <!--Pictures Sword-->
       <img src="img/sword1.png" alt="Noctis's Sword" width = 150 height = 50>
     </div>
 
@@ -105,7 +121,41 @@ It has had a significant influence on the usual game mechanics of role-playing v
     </div>
 
     <div class="vid"> <!--Youtube Trailer-->
-      <iframe width = 60% height = 650px src="https://www.youtube.com/embed/CNM6o9um1dc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe id="youtubeid" width = 60% height = 650px src="https://www.youtube.com/embed/CNM6o9um1dc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <script type="text/javascript"> //JavaScript for Stop BGM when Youtbe video is played
+      var youtubeplayer = document.getElementById("youtubeid");
+      youtubeplayer.addEventListener("onStateChange", function(e) {
+
+        if (e === 1) {
+          document.getElementById("BGM").pause();
+        } else {
+          document.getElementById("BGM").play();
+        };
+      });
+    </script>
+
+    <div class="center" id="metacritic"> <!--Icon Achievement but again-->
+      <img src="img/Plat.png" alt="Icon Achievement" width = 200 height = 200>
+    </div>
+
+    <div class="center">
+      <a href="https://www.metacritic.com/game/pc/final-fantasy-xv-windows-edition">
+        <img src="img/MC.png" alt="Metacritic">
+      </a>
+    </div>
+
+    <div class="center"> <!--transition-->
+      <img src="img/Kingslaive's logo.png" alt="Kingslaive's logo" width = 200 height = 80>
+    </div>
+
+    <div class="block" id="news"> <!--News from SquareEnix official website-->
+      <h1 class="center">News</h1>
+      <hr>
+      <div class="center">
+        <iframe src="https://finalfantasyxv.square-enix-games.com/en/updates" width="800" height="900"></iframe>
+      </div>
     </div>
 
     <div class="center" id="steam"> <!--transition-->
@@ -116,8 +166,8 @@ It has had a significant influence on the usual game mechanics of role-playing v
       <iframe src="https://store.steampowered.com/widget/637650/" frameborder="0" width="646" height="190"></iframe>
     </div>
 
-    <div class="center"> <!--transition-->
-      <img src="img/Kingslaive's logo.png" alt="Kingslaive's logo" width = 200 height = 80>
+    <div class="center"> <!--Icon Achievement-->
+      <img src="img/misc.png" alt="Icon Achievement" width = 200 height = 200>
     </div>
 
     <div class="center" id="gallery"> <!--Gallery-->
@@ -170,54 +220,32 @@ It has had a significant influence on the usual game mechanics of role-playing v
         </div>
       </div>
 
-    <script type="text/javascript"> //JavaScript for the Gallery
-    var slideIndex = 1;
-    showSlides(slideIndex);
+      <script type="text/javascript"> //JavaScript for the Gallery
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("Slides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("Slides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
       }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-  </script>
-  </div>
-
-  <div class="center"> <!--Icon Achievement-->
-    <img src="img/misc.png" alt="Icon Achievement" width = 200 height = 200>
-  </div>
-
-  <div class="block" id="news">
-    <h1 class="center">News</h1>
-    <hr>
-    <div class="center">
-      <iframe src="https://finalfantasyxv.square-enix-games.com/en/updates" width="800" height="900"></iframe>
-    </div>
-  </div>
-
-  <div class="center" id="metacritic"> <!--Icon Achievement but again-->
-    <img src="img/Plat.png" alt="Icon Achievement" width = 200 height = 200>
-  </div>
-
-  <div class="center">
-    <a href="https://www.metacritic.com/game/pc/final-fantasy-xv-windows-edition">
-      <img src="img/MC.png" alt="Metacritic">
-    </a>
+    </script>
   </div>
 
   <div class="center">
