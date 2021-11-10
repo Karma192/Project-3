@@ -9,7 +9,7 @@
 
 /*Background and General Modifications*/
 body {
-    background-image: url('../img/BackgroundFF.jpg');
+    background-image: url('../img/backgroundff.jpg');
     background-repeat: no-repeat;
     background-size: cover, cover;
     background-position: top inherit;
@@ -58,6 +58,7 @@ h6 {
   cursor: pointer;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+  border-radius: 50px;
 }
 
 .button2 {
@@ -73,6 +74,11 @@ h6 {
   cursor: pointer;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+  border-radius: 50px;
+}
+
+.button3 {
+  width: 20%;
 }
 
 .button:hover {
@@ -137,13 +143,33 @@ li a:hover:not(.active) {
   opacity: 0.85;
 }
 
-/*For the Video*/
+#IG {
+   width: 50px;
+}
+
+/*For Videos*/
 .vid {
-  max-width: 840;
-  max-height: 480;
+  max-width: 60%;
+  max-height: 900px;
   width: auto;
   height: auto;
   text-align: center;
+  margin: auto;
+}
+
+.youtube {
+  width: 60vw;
+  height: 600px;
+  border: 0;
+}
+
+.noborder {
+  border: 0;
+}
+
+#SE {
+  width: 95%;
+  height: 900px;
 }
 
 /*For the Gallery*/
